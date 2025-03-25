@@ -1,1 +1,43 @@
-# study-dev-week-2025 
+# Study Dev Week 2025
+Java RESTful API criada para o Study Dev Week
+
+## Diagrama de Classes
+
+```mermaid
+classDiagram
+  class User {
+    +String name
+    +Account account
+    +List~Feature~ features
+    +Card card
+    +List~News~ news
+  }
+
+  class Account {
+    +String number
+    +String agency
+    +float balance
+    +float limit
+  }
+
+  class Feature {
+    +String icon
+    +String description
+  }
+
+  class Card {
+    +String number
+    +float limit
+  }
+
+  class News {
+    +String icon
+    +String description
+  }
+
+  User --> Account
+  User --> "0..*" Feature
+  User --> Card
+  User --> "0..*" News
+  
+  ```
